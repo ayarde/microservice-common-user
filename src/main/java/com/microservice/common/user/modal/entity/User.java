@@ -31,5 +31,14 @@ public class User implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "role_id"),
             uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "role_id"})})
     private List<Role> roles;
+    private Integer tries;
+
+    public Integer getTries() {
+        return tries;
+    }
+
+    public void setTries(Integer tries) {
+        this.tries = tries;
+    }
 
 }
